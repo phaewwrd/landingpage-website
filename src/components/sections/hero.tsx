@@ -15,7 +15,10 @@ export function Hero() {
   const t = getSectionText(language).hero;
 
   return (
-    <section id="top" className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24">
+    <section
+      id="top"
+      className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24"
+    >
       <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="max-w-2xl">
           <motion.div
@@ -54,7 +57,9 @@ export function Hero() {
           >
             <Button href={site.phoneHref} size="lg" className="group">
               <PhoneCall className="mr-2 h-4 w-4 text-white" />
-              <span className="text-white">{t.call} {site.phoneDisplay}</span>
+              <span className="text-white">
+                {t.call} {site.phoneDisplay}
+              </span>
               <ArrowRight className="ml-2 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />
             </Button>
             <Button href="#features" variant="secondary" size="lg">

@@ -16,7 +16,9 @@ export function Services() {
     <section id="services" className="py-24 sm:py-28">
       <Container className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
         <div className="max-w-xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">{t.heading}</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">
+            {t.heading}
+          </p>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
             {t.title}
           </h2>
@@ -60,7 +62,9 @@ export function Services() {
                   {t.popular}
                 </span>
               </div>
-              <p className="mt-4 leading-7 text-stone-600">{service.description}</p>
+              <p className="mt-4 leading-7 text-stone-600">
+                {service.description}
+              </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {service.highlights.map((item) => (
                   <span

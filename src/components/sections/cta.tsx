@@ -57,7 +57,11 @@ export function CTA() {
               <p className="mt-4 text-sm text-stone-600">{site.address}</p>
               <p className="mt-2 text-sm text-stone-600">{t.openHours}</p>
 
-              <Button href={site.phoneHref} size="lg" className="mt-6 w-full group">
+              <Button
+                href={site.phoneHref}
+                size="lg"
+                className="mt-6 w-full group"
+              >
                 <PhoneCall className="mr-2 h-4 w-4 text-white" />
                 <span className="text-white">{t.callNowShort}</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />

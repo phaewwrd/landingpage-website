@@ -292,189 +292,187 @@ const content: Record<Language, SiteContent> = {
       },
     ],
   },
- th: {
-  site: {
-    ...sharedSite,
-    description:
-      "แลนดิ้งเพจสำหรับซาลอนระดับพรีเมียม รองรับการจองคิวออนไลน์ บริการทำผมครบวงจร และรีวิวจากลูกค้าจริง",
+  th: {
+    site: {
+      ...sharedSite,
+      description:
+        "แลนดิ้งเพจสำหรับซาลอนระดับพรีเมียม รองรับการจองคิวออนไลน์ บริการทำผมครบวงจร และรีวิวจากลูกค้าจริง",
+    },
+    navigationLinks: [
+      { label: "จุดเด่น", href: "#features" },
+      { label: "บริการ", href: "#services" },
+      { label: "รีวิว", href: "#testimonials" },
+      { label: "แพ็กเกจ", href: "#pricing" },
+      { label: "FAQ", href: "#faq" },
+    ],
+    heroStats: [
+      { value: "4.9★", label: "คะแนนรีวิวบน Google" },
+      { value: "8+", label: "ปีประสบการณ์ทีมช่าง" },
+      { value: "1,200+", label: "ลูกค้าที่ไว้วางใจ" },
+    ],
+    features: [
+      {
+        icon: "spark",
+        title: "Signature Hair Design",
+        description:
+          "ออกแบบทรงผมและสีผมให้เข้ากับลุค บุคลิก และสไตล์เฉพาะตัวของคุณ",
+      },
+      {
+        icon: "workflow",
+        title: "จองคิวง่าย รวดเร็ว",
+        description:
+          "เลือกวัน เวลา และช่างที่ต้องการได้สะดวก พร้อมเข้ารับบริการแบบไร้รอยต่อ",
+      },
+      {
+        icon: "shield",
+        title: "Premium Salon Experience",
+        description:
+          "บรรยากาศอบอุ่น สะอาด และเป็นส่วนตัว เพื่อประสบการณ์ที่ผ่อนคลายทุกครั้ง",
+      },
+      {
+        icon: "analytics",
+        title: "Hair Consultation",
+        description:
+          "วิเคราะห์สภาพเส้นผมและให้คำแนะนำก่อนทำ เพื่อผลลัพธ์ที่ตรงกับความต้องการ",
+      },
+      {
+        icon: "support",
+        title: "ทีมช่างมืออาชีพ",
+        description:
+          "พร้อมแนะนำการดูแลเส้นผมและเทคนิคจัดทรงให้สวยอยู่ได้นานหลังเข้ารับบริการ",
+      },
+      {
+        icon: "layers",
+        title: "เก็บดีเทลทุกขั้นตอน",
+        description:
+          "ปิดลุคด้วยการไดร์ จัดทรง และเลือกผลิตภัณฑ์ที่เหมาะกับเส้นผมของคุณโดยเฉพาะ",
+      },
+    ],
+    services: [
+      {
+        title: "Haircut & Styling",
+        description:
+          "ตัดผมพร้อมสระและเซ็ตทรง โดยออกแบบให้เหมาะกับรูปหน้าและสไตล์ของคุณ",
+        highlights: ["ตัดผมหญิง/ชาย", "สระ + ไดร์", "ปรึกษาทรงผม"],
+      },
+      {
+        title: "Hair Color & Balayage",
+        description:
+          "ทำสี เติมโคน หรือบาลายาจ พร้อมดูแลเส้นผมให้เงางามและสุขภาพดี",
+        highlights: ["Custom Color", "Balayage", "Gloss Treatment"],
+      },
+      {
+        title: "Treatment & Blow Dry",
+        description: "ฟื้นฟูผมเสีย ลดชี้ฟู พร้อมจัดทรงให้อยู่สวยตลอดวัน",
+        highlights: ["บำรุงลึก", "ดูแลผมทำเคมี", "พร้อมออกงาน"],
+      },
+    ],
+    testimonials: [
+      {
+        name: "Sofia Martin",
+        role: "Google Reviewer",
+        company: "Local Guide",
+        quote:
+          "หนึ่งในประสบการณ์ทำผมที่ดีที่สุด ช่างเข้าใจลุคที่ต้องการและบาลายาจออกมาสวยมาก",
+      },
+      {
+        name: "Rachel Kim",
+        role: "Verified Customer",
+        company: "Google Review",
+        quote: "ร้านสะอาด บริการดี ทีมงานเป็นกันเอง และจองคิวง่ายมาก",
+      },
+      {
+        name: "Naomi Carter",
+        role: "Regular Customer",
+        company: "Member Client",
+        quote:
+          "ทุกครั้งที่ออกจากร้านคือมั่นใจมาก ช่างละเอียดและจัดทรงสวยติดทนนาน",
+      },
+    ],
+    pricingPlans: [
+      {
+        name: "Essential",
+        price: "990 บาท",
+        description: "บริการตัดและจัดทรง สำหรับลุคดูดีในทุกวัน",
+        features: [
+          { label: "ปรึกษาทรง + สระผม" },
+          { label: "ตัดผมโดยทีมช่างมืออาชีพ" },
+          { label: "ไดร์และจัดทรง" },
+        ],
+      },
+      {
+        name: "Signature",
+        price: "3,990 บาท",
+        description: "แพ็กเกจยอดนิยมสำหรับรีเฟรชลุคและเพิ่มมิติให้เส้นผม",
+        featured: true,
+        features: [
+          { label: "ทุกอย่างใน Essential" },
+          { label: "ทำสีหรือบาลายาจ" },
+          { label: "Gloss & Tone Design" },
+          { label: "Signature Styling" },
+        ],
+      },
+      {
+        name: "Luxury Care",
+        price: "8,990 บาท",
+        description: "ดูแลครบจบทั้งลุค พร้อมฟื้นฟูเส้นผมแบบพรีเมียม",
+        features: [
+          { label: "ทุกอย่างใน Signature" },
+          { label: "Deep Repair Treatment" },
+          { label: "Full Styling Session" },
+          { label: "คำแนะนำดูแลผมเฉพาะบุคคล" },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "ต้องจองคิวล่วงหน้าหรือไม่?",
+        answer:
+          "สามารถ Walk-in ได้ตามคิวว่าง แต่แนะนำให้จองล่วงหน้าเพื่อเลือกวัน เวลา และช่างที่ต้องการ",
+      },
+      {
+        question: "บริการทำสีใช้เวลานานแค่ไหน?",
+        answer:
+          "โดยทั่วไปประมาณ 2–3 ชั่วโมง ขึ้นอยู่กับความยาวผม สีพื้นเดิม และลุคที่ต้องการ",
+      },
+      {
+        question: "ใช้ผลิตภัณฑ์อะไรในการดูแลเส้นผม?",
+        answer:
+          "เราเลือกใช้ผลิตภัณฑ์ซาลอนเกรดพรีเมียมที่เหมาะกับสภาพเส้นผมของลูกค้าแต่ละคน",
+      },
+      {
+        question: "สามารถปรึกษาทรงผมก่อนจองได้ไหม?",
+        answer:
+          "ได้เลย ทีมงานพร้อมให้คำแนะนำเกี่ยวกับทรงผม สีผม และบริการที่เหมาะกับคุณ",
+      },
+    ],
+    footerGroups: [
+      {
+        title: "Salon",
+        links: [
+          { label: "จุดเด่น", href: "#features" },
+          { label: "แพ็กเกจ", href: "#pricing" },
+          { label: "FAQ", href: "#faq" },
+        ],
+      },
+      {
+        title: "Explore",
+        links: [
+          { label: "บริการ", href: "#services" },
+          { label: "รีวิวลูกค้า", href: "#testimonials" },
+          { label: "จองคิว", href: "#cta" },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          { label: "ติดต่อเรา", href: "#cta" },
+          { label: "ตำแหน่งร้าน", href: "#testimonials" },
+          { label: "เวลาทำการ", href: "#faq" },
+        ],
+      },
+    ],
   },
-  navigationLinks: [
-    { label: "จุดเด่น", href: "#features" },
-    { label: "บริการ", href: "#services" },
-    { label: "รีวิว", href: "#testimonials" },
-    { label: "แพ็กเกจ", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
-  ],
-  heroStats: [
-    { value: "4.9★", label: "คะแนนรีวิวบน Google" },
-    { value: "8+", label: "ปีประสบการณ์ทีมช่าง" },
-    { value: "1,200+", label: "ลูกค้าที่ไว้วางใจ" },
-  ],
-  features: [
-    {
-      icon: "spark",
-      title: "Signature Hair Design",
-      description:
-        "ออกแบบทรงผมและสีผมให้เข้ากับลุค บุคลิก และสไตล์เฉพาะตัวของคุณ",
-    },
-    {
-      icon: "workflow",
-      title: "จองคิวง่าย รวดเร็ว",
-      description:
-        "เลือกวัน เวลา และช่างที่ต้องการได้สะดวก พร้อมเข้ารับบริการแบบไร้รอยต่อ",
-    },
-    {
-      icon: "shield",
-      title: "Premium Salon Experience",
-      description:
-        "บรรยากาศอบอุ่น สะอาด และเป็นส่วนตัว เพื่อประสบการณ์ที่ผ่อนคลายทุกครั้ง",
-    },
-    {
-      icon: "analytics",
-      title: "Hair Consultation",
-      description:
-        "วิเคราะห์สภาพเส้นผมและให้คำแนะนำก่อนทำ เพื่อผลลัพธ์ที่ตรงกับความต้องการ",
-    },
-    {
-      icon: "support",
-      title: "ทีมช่างมืออาชีพ",
-      description:
-        "พร้อมแนะนำการดูแลเส้นผมและเทคนิคจัดทรงให้สวยอยู่ได้นานหลังเข้ารับบริการ",
-    },
-    {
-      icon: "layers",
-      title: "เก็บดีเทลทุกขั้นตอน",
-      description:
-        "ปิดลุคด้วยการไดร์ จัดทรง และเลือกผลิตภัณฑ์ที่เหมาะกับเส้นผมของคุณโดยเฉพาะ",
-    },
-  ],
-  services: [
-    {
-      title: "Haircut & Styling",
-      description:
-        "ตัดผมพร้อมสระและเซ็ตทรง โดยออกแบบให้เหมาะกับรูปหน้าและสไตล์ของคุณ",
-      highlights: ["ตัดผมหญิง/ชาย", "สระ + ไดร์", "ปรึกษาทรงผม"],
-    },
-    {
-      title: "Hair Color & Balayage",
-      description:
-        "ทำสี เติมโคน หรือบาลายาจ พร้อมดูแลเส้นผมให้เงางามและสุขภาพดี",
-      highlights: ["Custom Color", "Balayage", "Gloss Treatment"],
-    },
-    {
-      title: "Treatment & Blow Dry",
-      description:
-        "ฟื้นฟูผมเสีย ลดชี้ฟู พร้อมจัดทรงให้อยู่สวยตลอดวัน",
-      highlights: ["บำรุงลึก", "ดูแลผมทำเคมี", "พร้อมออกงาน"],
-    },
-  ],
-  testimonials: [
-    {
-      name: "Sofia Martin",
-      role: "Google Reviewer",
-      company: "Local Guide",
-      quote:
-        "หนึ่งในประสบการณ์ทำผมที่ดีที่สุด ช่างเข้าใจลุคที่ต้องการและบาลายาจออกมาสวยมาก",
-    },
-    {
-      name: "Rachel Kim",
-      role: "Verified Customer",
-      company: "Google Review",
-      quote:
-        "ร้านสะอาด บริการดี ทีมงานเป็นกันเอง และจองคิวง่ายมาก",
-    },
-    {
-      name: "Naomi Carter",
-      role: "Regular Customer",
-      company: "Member Client",
-      quote:
-        "ทุกครั้งที่ออกจากร้านคือมั่นใจมาก ช่างละเอียดและจัดทรงสวยติดทนนาน",
-    },
-  ],
-  pricingPlans: [
-    {
-      name: "Essential",
-      price: "990 บาท",
-      description: "บริการตัดและจัดทรง สำหรับลุคดูดีในทุกวัน",
-      features: [
-        { label: "ปรึกษาทรง + สระผม" },
-        { label: "ตัดผมโดยทีมช่างมืออาชีพ" },
-        { label: "ไดร์และจัดทรง" },
-      ],
-    },
-    {
-      name: "Signature",
-      price: "3,990 บาท",
-      description: "แพ็กเกจยอดนิยมสำหรับรีเฟรชลุคและเพิ่มมิติให้เส้นผม",
-      featured: true,
-      features: [
-        { label: "ทุกอย่างใน Essential" },
-        { label: "ทำสีหรือบาลายาจ" },
-        { label: "Gloss & Tone Design" },
-        { label: "Signature Styling" },
-      ],
-    },
-    {
-      name: "Luxury Care",
-      price: "8,990 บาท",
-      description: "ดูแลครบจบทั้งลุค พร้อมฟื้นฟูเส้นผมแบบพรีเมียม",
-      features: [
-        { label: "ทุกอย่างใน Signature" },
-        { label: "Deep Repair Treatment" },
-        { label: "Full Styling Session" },
-        { label: "คำแนะนำดูแลผมเฉพาะบุคคล" },
-      ],
-    },
-  ],
-  faqs: [
-    {
-      question: "ต้องจองคิวล่วงหน้าหรือไม่?",
-      answer:
-        "สามารถ Walk-in ได้ตามคิวว่าง แต่แนะนำให้จองล่วงหน้าเพื่อเลือกวัน เวลา และช่างที่ต้องการ",
-    },
-    {
-      question: "บริการทำสีใช้เวลานานแค่ไหน?",
-      answer:
-        "โดยทั่วไปประมาณ 2–3 ชั่วโมง ขึ้นอยู่กับความยาวผม สีพื้นเดิม และลุคที่ต้องการ",
-    },
-    {
-      question: "ใช้ผลิตภัณฑ์อะไรในการดูแลเส้นผม?",
-      answer:
-        "เราเลือกใช้ผลิตภัณฑ์ซาลอนเกรดพรีเมียมที่เหมาะกับสภาพเส้นผมของลูกค้าแต่ละคน",
-    },
-    {
-      question: "สามารถปรึกษาทรงผมก่อนจองได้ไหม?",
-      answer:
-        "ได้เลย ทีมงานพร้อมให้คำแนะนำเกี่ยวกับทรงผม สีผม และบริการที่เหมาะกับคุณ",
-    },
-  ],
-  footerGroups: [
-    {
-      title: "Salon",
-      links: [
-        { label: "จุดเด่น", href: "#features" },
-        { label: "แพ็กเกจ", href: "#pricing" },
-        { label: "FAQ", href: "#faq" },
-      ],
-    },
-    {
-      title: "Explore",
-      links: [
-        { label: "บริการ", href: "#services" },
-        { label: "รีวิวลูกค้า", href: "#testimonials" },
-        { label: "จองคิว", href: "#cta" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "ติดต่อเรา", href: "#cta" },
-        { label: "ตำแหน่งร้าน", href: "#testimonials" },
-        { label: "เวลาทำการ", href: "#faq" },
-      ],
-    },
-  ],
-},
 };
 
 const sectionText: Record<Language, SectionTextContent> = {
@@ -546,8 +544,7 @@ const sectionText: Record<Language, SectionTextContent> = {
     cta: {
       eyebrow: "Ready for your next look?",
       title: "Book your salon visit in minutes.",
-      desc:
-        "Call us directly for availability, stylist matching, and service recommendations tailored to your hair goals.",
+      desc: "Call us directly for availability, stylist matching, and service recommendations tailored to your hair goals.",
       callNow: `Call now: ${sharedSite.phoneDisplay}`,
       phoneMainLabel: "Book by phone",
       openHours: "Open daily 10:00 AM - 8:00 PM",
@@ -588,7 +585,11 @@ const sectionText: Record<Language, SectionTextContent> = {
       description:
         "เราผสานเทรนด์ที่ทันสมัยเข้ากับคำแนะนำการดูแลผม เพื่อให้ลุคของคุณดูดีได้ยาวนาน",
       explore: "ดูเพิ่มเติม",
-      photoLabels: ["โซนเก้าอี้ทำผม", "บริการทำสีและบาลายาจ", "ผลงานจัดทรงเสร็จสมบูรณ์"],
+      photoLabels: [
+        "โซนเก้าอี้ทำผม",
+        "บริการทำสีและบาลายาจ",
+        "ผลงานจัดทรงเสร็จสมบูรณ์",
+      ],
     },
     services: {
       heading: "บริการ",
@@ -615,7 +616,8 @@ const sectionText: Record<Language, SectionTextContent> = {
     pricing: {
       heading: "ราคา",
       title: "แพ็กเกจบริการสำหรับทุกเป้าหมายทรงผม",
-      description: "เลือกแพ็กเกจที่เหมาะกับคุณ แล้วโทรจองวันเวลาและช่างที่ต้องการ",
+      description:
+        "เลือกแพ็กเกจที่เหมาะกับคุณ แล้วโทรจองวันเวลาและช่างที่ต้องการ",
       mostBooked: "ยอดจองสูงสุด",
       startingAt: "เริ่มต้นที่",
       book: "จอง",
