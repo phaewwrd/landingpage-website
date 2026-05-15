@@ -29,14 +29,15 @@ interface LanguageProviderProps {
 const STORAGE_KEY = "landing-language";
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>("en");
-
-  useEffect(() => {
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "en" || saved === "th") {
-      setLanguage(saved);
+  const [language, setLanguage] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      if (saved === "en" || saved === "th") {
+        return saved;
+      }
     }
-  }, []);
+    return "en";
+  });
 
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, language);
@@ -46,7 +47,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const value = useMemo(() => ({ language, setLanguage }), [language]);
 
   return (
-    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
   );
 }
 

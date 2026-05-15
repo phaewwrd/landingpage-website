@@ -17,7 +17,9 @@ export function Pricing() {
     <section id="pricing" className="py-24 sm:py-28">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">{t.heading}</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">
+            {t.heading}
+          </p>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
             {t.title}
           </h2>
@@ -50,9 +52,13 @@ export function Pricing() {
                 <span className="text-4xl font-semibold tracking-tight text-stone-900">
                   {plan.price}
                 </span>
-                <span className="pb-1 text-sm text-stone-500">{t.startingAt}</span>
+                <span className="pb-1 text-sm text-stone-500">
+                  {t.startingAt}
+                </span>
               </div>
-              <p className="mt-3 leading-7 text-stone-600">{plan.description}</p>
+              <p className="mt-3 leading-7 text-stone-600">
+                {plan.description}
+              </p>
 
               <ul className="mt-6 space-y-3 border-t border-stone-200 pt-6 text-sm text-stone-600">
                 {plan.features.map((feature) => (
@@ -68,7 +74,9 @@ export function Pricing() {
                 variant={plan.featured ? "primary" : "secondary"}
                 className="mt-8 w-full "
               >
-                <p className={plan.featured ? "text-white" : "text-[#556b2f]"}>{t.book} {plan.name}</p>
+                <p className={plan.featured ? "text-white" : "text-[#556b2f]"}>
+                  {t.book} {plan.name}
+                </p>
               </Button>
             </motion.article>
           ))}

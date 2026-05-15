@@ -17,7 +17,9 @@ export function Footer() {
             <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-[#556b2f] via-[#6f4e37] to-[#8b5e3c] font-semibold text-white">
               N
             </span>
-            <span className="text-base font-semibold text-stone-900">{site.name}</span>
+            <span className="text-base font-semibold text-stone-900">
+              {site.name}
+            </span>
           </a>
           <p className="mt-4 max-w-md text-sm leading-7 text-stone-600">
             {t.desc}
@@ -33,11 +35,16 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-3">
           {footerGroups.map((group) => (
             <div key={group.title}>
-              <p className="text-sm font-semibold text-stone-900">{group.title}</p>
+              <p className="text-sm font-semibold text-stone-900">
+                {group.title}
+              </p>
               <ul className="mt-4 space-y-3 text-sm text-stone-600">
                 {group.links.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="transition-colors hover:text-stone-900">
+                    <a
+                      href={link.href}
+                      className="transition-colors hover:text-stone-900"
+                    >
                       {link.label}
                     </a>
                   </li>
@@ -52,7 +59,11 @@ export function Footer() {
         <p>{t.rights}</p>
         <nav aria-label="Footer navigation" className="flex flex-wrap gap-4">
           {navigationLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-stone-800">
+            <a
+              key={link.href}
+              href={link.href}
+              className="transition-colors hover:text-stone-800"
+            >
               {link.label}
             </a>
           ))}

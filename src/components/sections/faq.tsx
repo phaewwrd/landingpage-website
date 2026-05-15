@@ -13,7 +13,9 @@ export function FAQ() {
     <section id="faq" className="py-24 sm:py-28">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">{t.heading}</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">
+            {t.heading}
+          </p>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
             {t.title}
           </h2>

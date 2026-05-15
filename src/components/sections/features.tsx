@@ -39,7 +39,9 @@ export function Features() {
     <section id="features" className="py-24 sm:py-28">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">{t.heading}</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#556b2f]">
+            {t.heading}
+          </p>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
             {t.title}
           </h2>
@@ -54,7 +56,10 @@ export function Features() {
             { src: "/images/salon-color.jpg", alt: t.photoLabels[1] },
             { src: "/images/salon-style.jpg", alt: t.photoLabels[2] },
           ].map((photo) => (
-            <div key={photo.src} className="overflow-hidden rounded-xl border border-[#d8c7ae] bg-[#fffdfa]">
+            <div
+              key={photo.src}
+              className="overflow-hidden rounded-xl border border-[#d8c7ae] bg-[#fffdfa]"
+            >
               <Image
                 src={photo.src}
                 alt={photo.alt}
