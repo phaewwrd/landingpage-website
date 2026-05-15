@@ -19,11 +19,11 @@ export function FAQ() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-2">
+        <div className="mt-12 grid items-start gap-4 lg:grid-cols-2">
           {faqs.map((item) => (
             <details
               key={item.question}
-              className="group rounded-xl border border-stone-200 bg-white p-6 open:bg-stone-50"
+              className="group self-start rounded-xl border border-stone-200 bg-white p-6 open:bg-stone-50"
             >
               <summary className="cursor-pointer list-none text-base font-medium text-stone-900 focus-visible:outline-none">
                 <div className="flex items-center justify-between gap-4">
